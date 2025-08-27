@@ -16,11 +16,11 @@ export default function Logged() {
       <Text style={styles.subWelcome}> Seja a janela</Text>
 
       <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate("Home")}>
-        <Text>Sair desta porra</Text>
+        <Text>Sair da conta</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate("Carousel")}>
-        <Text>Ficar</Text>
+        <Text>Ver filmes</Text>
       </TouchableOpacity>
     </ImageBackground >
   );
