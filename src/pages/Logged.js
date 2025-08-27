@@ -23,13 +23,14 @@ export default function Logged() {
       <Text style={styles.welcome}>BEM-VINDO</Text>
       <Text style={styles.subWelcome}> Seja a janela</Text>
 
-      <TouchableOpacity style={styles.botao} onPress={killLogin}>
-        <Text>Sair da conta</Text>
+      <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate("Carousel")}>
+        <Image style={styles.filmes} source={require("../assets/images/image-Photoroom.png")} ></Image>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate("Carousel")}>
-        <Text>Ver filmes</Text>
+      <TouchableOpacity style={styles.botao} onPress={killLogin}>
+        <Image style={styles.voltar} source={require("../assets/images/exit_windows.jpg")} ></Image>
       </TouchableOpacity>
+
     </ImageBackground >
   );
 }
@@ -92,5 +93,15 @@ const styles = StyleSheet.create({
 
     fontWeight: "bold",
   },
+
+  voltar: {
+    width: 230,
+    height: 100,
+  },
+
+  filmes: {
+    width: 145,
+    height: 145,
+  }
 })
 

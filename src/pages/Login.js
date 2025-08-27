@@ -8,7 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 import { setItem } from '../components/AsyncStorage';
 
 export default function Login() {
-  const [visible, setVisible] = useState(false);
+  const [visivel, setVisivel] = useState(false);
 
   const navigation = useNavigation();
 
@@ -24,13 +24,10 @@ export default function Login() {
       navigation.navigate("Logged")
       setItem('onCarousel', '1')
     } else {
-      setVisible(true)
-
-      setTimeout(() => {
-        setVisible(false)
-      }, 2000);
-    }
+      setVisivel(true)
+    };
   }
+
 
   return (
     <ImageBackground style={styles.background} source={require("../assets/images/Fundo_login.jpg")} >
@@ -47,7 +44,7 @@ export default function Login() {
       <TextInput style={styles.textInput} placeholder='Email' value={email} onChangeText={(email) => setEmail(email)}></TextInput>
       <TextInput style={styles.textInput} placeholder='Senha' value={senha} onChangeText={(senha) => setSenha(senha)}></TextInput>
 
-      {visible && <Text style={{ color: "red" }}>Email ou senha inválidos</Text>}
+      {visivel && <Text style={{ color: "red" }}>Email ou senha inválidos</Text>}
 
       <TouchableOpacity style={styles.ButtonCadastro} onPress={VerificacaoLogin} >
         <Image style={styles.iconCadastro} source={require("../assets/images/confirm_button_xp.png")}></Image>

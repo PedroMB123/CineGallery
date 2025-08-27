@@ -60,7 +60,6 @@ export default function App() {
   const navigation = useNavigation()
 
 
-
   // useSharedValue => Reativo as animações, quando o nosso scrollX.value for alterado
   // todas as animações serão alteradas
   const scrollX = useSharedValue(0);
@@ -131,7 +130,6 @@ export default function App() {
         showsHorizontalScrollIndicator={false}
       // showsHorizontalScrollIndicator => Ocoulta "barrinha" horizontal da "rolagem"
       />
-
 
       <StatusBar style="auto" />
     </View>
