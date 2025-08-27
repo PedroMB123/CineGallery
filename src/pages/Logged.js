@@ -4,18 +4,26 @@ import { Text, View, Button, StyleSheet, ImageBackground, TouchableOpacity, Imag
 // Quando importamos e useNavigation ele nos retorna uma instância de navegação
 // Isso nos permite acessar todos os métodos referente a vanegação (navigate, goBack)
 import { useNavigation } from '@react-navigation/native';
+import { removeItem } from '../components/AsyncStorage';
 
 
 export default function Logged() {
+
+  const killLogin = async () => {
+    await removeItem("onCarousel")
+    navigation.navigate("Home")
+  }
+
   const navigation = useNavigation();
   return (
-    <ImageBackground style={styles.background} source={require("../assets/images/windows_page.jpg")} >
 
+
+    <ImageBackground style={styles.background} source={require("../assets/images/windows_page.jpg")} >
 
       <Text style={styles.welcome}>BEM-VINDO</Text>
       <Text style={styles.subWelcome}> Seja a janela</Text>
 
-      <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate("Home")}>
+      <TouchableOpacity style={styles.botao} onPress={killLogin}>
         <Text>Sair da conta</Text>
       </TouchableOpacity>
 

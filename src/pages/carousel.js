@@ -59,10 +59,7 @@ export default function App() {
   const [data, setData] = useState([]);
   const navigation = useNavigation()
 
-  const handleReset = async () => {
-    await removeItem("onCarousel")
-    navigation.navigate("Home")
-  }
+
 
   // useSharedValue => Reativo as animações, quando o nosso scrollX.value for alterado
   // todas as animações serão alteradas
