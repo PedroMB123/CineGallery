@@ -20,8 +20,8 @@ export default function Logged() {
 
     <ImageBackground style={styles.background} source={require("../assets/images/windows_page.jpg")} >
 
-      <Text style={styles.welcome}>BEM-VINDO</Text>
-      <Text style={styles.subWelcome}> Seja a janela</Text>
+      <Text style={styles.welcome}>Oi, como está?</Text>
+      <Text style={styles.subWelcome}> Aproveite </Text>
 
       <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate("Carousel")}>
         <Image style={styles.filmes} source={require("../assets/images/image-Photoroom.png")} ></Image>
