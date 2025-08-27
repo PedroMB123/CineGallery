@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect, TouchableOpacity } from 'react';
 import { StyleSheet, Text, View, Image, Dimensions, FlatList } from 'react-native';
 
-import { removeItem } from '../components/AsyncStorage';
 
 // Import reanimated
 
